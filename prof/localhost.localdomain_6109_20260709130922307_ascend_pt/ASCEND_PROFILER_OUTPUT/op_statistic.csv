@@ -1,0 +1,2 @@
+Device_id,OP Type,Core Type,Count,Total Time(us),Min Time(us),Avg Time(us),Max Time(us),Ratio(%)
+3,_swa_fwd_kernel,AI_CORE,70,377241.021,4966.625,5389.157,5972.793,100
