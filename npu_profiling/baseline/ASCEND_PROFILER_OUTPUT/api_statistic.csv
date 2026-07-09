@@ -1,0 +1,26 @@
+Device_id,Level,API Name,Time(us),Count,Avg(us),Min(us),Max(us),Variance
+host,runtime,DeviceSynchronize,358222.972,6,59703.829,57816.869,61721.484,1981025.708
+host,runtime,KernelLaunch,99.214,20,4.961,2.413,15.944,11.103
+host,runtime,LaunchKernelV2,1172.786,245,4.787,1.863,40.661,16.878
+host,runtime,MemCopySync,600.331,20,30.017,19.86,64.407,91.098
+host,runtime,StreamSyncTaskFinish,0,21,0,0,0,0
+host,runtime,StreamSynchronize,52.902,20,2.645,0.28,5.879,2.507
+host,acl,aclmdlRICaptureGetInfo,12.869,80,0.161,0.07,1.152,0.032
+host,acl,aclnnAdds,38.328,5,7.666,4.076,18.899,31.837
+host,acl,aclnnCat,85.448,10,8.545,6.72,12.389,2.432
+host,acl,aclnnClamp,49.724,5,9.945,5.639,17.145,16.513
+host,acl,aclnnCumsum,146.519,10,14.652,9.164,23.435,18.004
+host,acl,aclnnInplaceCopy,186.765,25,7.471,3.345,38.448,49.922
+host,acl,aclnnInplaceNormal,897.045,20,44.852,35.683,69.144,68.8
+host,acl,aclnnInplaceRandom,105.088,5,21.018,12.579,32.289,46.315
+host,acl,aclnnInplaceZero,326.804,35,9.337,4.357,85.759,177.284
+host,acl,aclrtGetDeviceCount,1.973,1,1.973,1.973,1.973,0
+host,acl,aclrtGetStreamAttribute,23.74,115,0.206,0.08,4.057,0.15
+host,acl,aclrtLaunchKernelWithHostArgs,1357.171,245,5.539,2.223,54.712,22.837
+host,acl,aclrtMemcpy,620.443,20,31.022,20.561,66.099,95.928
+host,acl,aclrtPointerGetAttributes,84.088,165,0.51,0.17,14.381,1.552
+host,acl,aclrtStreamGetId,87.33,720,0.121,0.06,9.213,0.121
+host,acl,aclrtSynchronizeDeviceWithTimeout,358236.952,6,59706.159,57819.423,61724.047,1980887.973
+host,acl,aclrtSynchronizeStream,47.721,10,4.772,3.184,7.541,1.893
+host,acl,aclrtSynchronizeStreamWithTimeout,22.432,10,2.243,0.711,3.986,1.904
+host,node,launch,1610.242,265,6.076,2.424,63.084,26.591
