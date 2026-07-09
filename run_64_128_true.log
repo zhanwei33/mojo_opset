@@ -1,0 +1,403 @@
+[INFO] 07/09/2026 08:54:52 /data/w00609825/mojo_opset/mojo_opset/utils/platform.py:29 >> Ascend NPU detected
+[WARNING] 07/09/2026 08:54:56 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXPagedPrefillGQAWithKVDequant is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:56 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXPagedDecodeGQAWithKVDequant is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:56 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXPagedPrefillSWAWithKVDequant is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:56 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXPagedDecodeSWAWithKVDequant is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXQuantBatchGemmReduceSum is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXMoEGating is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXMoEDispatch is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXExperts is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXMoECombine is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXQuantExperts is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXMoE is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXQuantMoE is not supported on npu platform.
+[WARNING] 07/09/2026 08:54:57 /data/w00609825/mojo_opset/mojo_opset/core/backend_registry.py:91 >> Operator TTXRelativeEmbedding is not supported on npu platform.
+============================= test session starts ==============================
+platform linux -- Python 3.11.13, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/python3.11.13/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /data/w00609825/mojo_opset
+configfile: pytest.ini
+plugins: anyio-4.10.0
+collecting ... collected 1 item
+
+mojo_opset/tests/accuracy/functions/test_attention.py::test_swa_function_perf 
+-------------------------------- live log call ---------------------------------
+[INFO] 07/09/2026 08:54:58 >> get env TRITON_DEBUG = 1
+[INFO] 07/09/2026 08:54:58 >> get env TRITON_ALWAYS_COMPILE = 1
+Dumping intermediate results to /root/.triton/dump/_XHjr1aKcaFkW2I88IE5oW8BiOnP7iQQD4hM5odV690
+Dumping intermediate results to /root/.triton/dump/HOa_zFqqzXjsgYCdTue69vZy78bPTdhIkWkNptmH7Ek
+Dumping intermediate results to /root/.triton/dump/v6BPqnP0M5xynaDL2erO90O51IrUmDdko1VJfXv7Dw0
+Dumping intermediate results to /root/.triton/dump/8IxrDbs8MY1XZGFzkHOUmagfxH2xOAeUbTzNH9opHrc
+Dumping intermediate results to /root/.triton/dump/ahkZiGIEarRwb1UByPUVbwxF0EpeOPtp0riiPy4YNm4
+Dumping intermediate results to /root/.triton/dump/rPZ2vxTDbiJ52dinGUUewuQ634QFDodalvLKLfUS8ZI
+Dumping intermediate results to /root/.triton/dump/ScqW-gENNfSpoZ8q5UTweHhpSIEylQrW9QiC-FCsr4Q
+Dumping intermediate results to /root/.triton/dump/9GzvVATB_7IyNjGcoItVbNLjH3MTw7lGOZ-cv2qx-C0
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpsd5bm54x/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpsd5bm54x/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpsd5bm54x/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpsd5bm54x/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp18spswbk/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp18spswbk/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp18spswbk/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp18spswbk/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp9b57g83j/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp9b57g83j/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp9b57g83j/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp9b57g83j/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpbr_bp8jp/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpbr_bp8jp/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpbr_bp8jp/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpbr_bp8jp/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmprtutz4ik/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmprtutz4ik/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmprtutz4ik/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmprtutz4ik/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp_h5wrayg/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp_h5wrayg/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp_h5wrayg/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp_h5wrayg/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpq4d4aa1z/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpq4d4aa1z/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpq4d4aa1z/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpq4d4aa1z/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpjue5_h2f/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpjue5_h2f/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpjue5_h2f/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpjue5_h2f/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[INFO] 07/09/2026 08:55:00 >> get env TRITON_BENCH_METHOD = npu
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+[2026-07-09 08:55:01] [WARNING] [36015] profiler.py: Incorrect schedule: Stop profiler while current state is RECORD which may result in incomplete parsed data.
+Triton autotuning timings for function _swa_fwd_kernel:
+  config=BLOCK_M: 64, BLOCK_N: 64, multibuffer: True, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=inf
+  config=BLOCK_M: 64, BLOCK_N: 64, multibuffer: False, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=inf
+  config=BLOCK_M: 64, BLOCK_N: 128, multibuffer: True, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=inf
+  config=BLOCK_M: 64, BLOCK_N: 128, multibuffer: False, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=inf
+  config=BLOCK_M: 128, BLOCK_N: 64, multibuffer: True, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=inf
+  config=BLOCK_M: 128, BLOCK_N: 64, multibuffer: False, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=inf
+  config=BLOCK_M: 128, BLOCK_N: 128, multibuffer: True, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=inf
+  config=BLOCK_M: 128, BLOCK_N: 128, multibuffer: False, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=inf
+Triton autotuning for function _swa_fwd_kernel finished after 3.18s; best config selected: BLOCK_M: 64, BLOCK_N: 64, multibuffer: True, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None;
+Dumping intermediate results to /root/.triton/dump/_XHjr1aKcaFkW2I88IE5oW8BiOnP7iQQD4hM5odV690
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmps7y2w7a6/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmps7y2w7a6/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmps7y2w7a6/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --limit-auto-multi-buffer-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmps7y2w7a6/kernel --enable-vf-merge-level=1 --hfusion-enable-multiple-consumer-fusion=True
+Dumping precompiled.h to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/omlBed-AJ1lvVI9Ku1xaeFXJF0R0bPOWVymSmF9VslE
+Dumping intermediate results to /root/.triton/dump/fht_zDFekM7xWummYfcY99rCRiT4Ji3nbN77lEi47_E
+Dumping intermediate results to /root/.triton/dump/ulQXTPgOIOXiThCag1DxpJIXoeC6MDEPMCxjbBrfH3k
+Dumping intermediate results to /root/.triton/dump/M9wktEp0GND-0m-Z7kJtN9AIOgUEA7KCGjpr9n8I_eQ
+Dumping intermediate results to /root/.triton/dump/Lza7mhSTB-3SrdN4Uz7qrKudGMXkAE4feFTphGKq5Jg
+Dumping intermediate results to /root/.triton/dump/vsBnqJMEKIBgEgk-FhkzpmP0yocMAPe7D7bFzxFsUTI
+SSBUFFER return code=2, will fallback to enable_dynamic_cv_pipeline=False
+Dumping intermediate results to /root/.triton/dump/Kaa49r_Q_6Wd0n923wRyx5Rcyqhw3qlmB3vbVepU2DI
+SSBUFFER return code=2, will fallback to enable_dynamic_cv_pipeline=False
+SSBUFFER return code=2, will fallback to enable_dynamic_cv_pipeline=False
+SSBUFFER return code=2, will fallback to enable_dynamic_cv_pipeline=False
+SSBUFFER return code=2, will fallback to enable_dynamic_cv_pipeline=False
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp4obyozpv/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp4obyozpv/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp4obyozpv/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp4obyozpv/kernel --enable-vf-merge-level=1
+SSBUFFER return code=2, will fallback to enable_dynamic_cv_pipeline=False
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpnpemyqw_/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpnpemyqw_/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpnpemyqw_/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpnpemyqw_/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp2jt4x10q/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp2jt4x10q/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp2jt4x10q/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp2jt4x10q/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpiker78s_/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpiker78s_/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpiker78s_/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpiker78s_/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmprgnwhi61/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmprgnwhi61/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmprgnwhi61/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmprgnwhi61/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp7giga5cg/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp7giga5cg/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp7giga5cg/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp7giga5cg/kernel --enable-vf-merge-level=1
+Dumping precompiled.h to /root/.triton/dump/uwaeavuDDMShSLDBm02kqi07wbXv3tTOJ1AOE_qLNs0
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/uwaeavuDDMShSLDBm02kqi07wbXv3tTOJ1AOE_qLNs0
+Dumping precompiled.h to /root/.triton/dump/uwaeavuDDMShSLDBm02kqi07wbXv3tTOJ1AOE_qLNs0
+Dumping launcher_cxx11abi1.cxx to /root/.triton/dump/uwaeavuDDMShSLDBm02kqi07wbXv3tTOJ1AOE_qLNs0
+[2026-07-09 08:55:04] [WARNING] [36015] profiler.py: Incorrect schedule: Stop profiler while current state is RECORD which may result in incomplete parsed data.
+[2026-07-09 08:55:05] [INFO] [37722] profiler.py: Start parsing profiling data in sync mode at: /root/.triton/profile_results/prof_20260709_085504_MainProcess-36015/triton_36015_20260709085504572_ascend_pt
+|/-[2026-07-09 08:55:07] [INFO] [37731] profiler.py: CANN profiling data parsed in a total time of 0:00:02.040509
+\[2026-07-09 08:55:08] [INFO] [37722] profiler.py: All profiling data parsed in a total time of 0:00:03.163185
+Triton autotuning timings for function _swa_bwd_preprocess:
+  config=BLOCK_SIZE: 32, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=0.009572966666666667
+  config=BLOCK_SIZE: 64, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None; time=0.009610933333333333
+Triton autotuning compile failed configs for function _swa_bwd_preprocess:
+  config=BLOCK_SIZE: 128, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None
+  config=BLOCK_SIZE: 256, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None
+  config=BLOCK_SIZE: 512, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None
+  config=BLOCK_SIZE: 1024, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None
+Triton autotuning for function _swa_bwd_preprocess finished after 5.93s; best config selected: BLOCK_SIZE: 32, num_warps: 4, num_ctas: 1, num_stages: 2, num_buffers_warp_spec: 0, num_consumer_groups: 0, reg_dec_producer: 0, reg_inc_consumer: 0, maxnreg: None;
+Dumping intermediate results to /root/.triton/dump/iZ6iBg2x9AylqAFJNNGI2kn8xhB3DCJ-NxyaaYkR1_s
+Dumping intermediate results to /root/.triton/dump/nvAqCIrmQ6HDHTD9zVJ4r6BwpR-ApzL_7s3eqtDYuTU
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpvz2sznu6/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpvz2sznu6/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmpvz2sznu6/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=False --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmpvz2sznu6/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list:  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp6fum0k0s/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc' --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp6fum0k0s/kernel --enable-vf-merge-level=1
+[DEBUG] cmd_list: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile /tmp/tmp6fum0k0s/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp6fum0k0s/kernel --enable-vf-merge-level=1
+[2026-07-09 08:55:14] [WARNING] [36015] profiler.py: Incorrect schedule: Stop profiler while current state is WARMUP which will result in empty parsed data.
+[2026-07-09 08:55:14] [WARNING] [36015] profiler.py: Profiler is not initialized. Skip this metadata.
+[W709 08:55:14.723944320 ToKernelNpu.cpp:41] Warning: Device do not support double dtype now, dtype cast replace with float. (function operator())
+FAILED
+
+=================================== FAILURES ===================================
+____________________________ test_swa_function_perf ____________________________
+
+    def test_swa_function_perf():
+        test_cases = [
+            ((2, 16, 4, 128, 1024, 0, torch.float32), True, 4, 255),
+            ((2, 16, 4, 96, 1024, 0, torch.bfloat16), True, 4, 255),
+            ((2, 16, 4, 128, 4096, 0, torch.bfloat16), True, 4, 255),
+            ((2, 16, 4, 128, 1024, 0, torch.float32), False, 4, 1023)
+        ]
+        import torch_npu
+    
+        experimental_config = torch_npu.profiler._ExperimentalConfig(
+            aic_metrics=torch_npu.profiler.AiCMetrics.PipeUtilization,
+            profiler_level=torch_npu.profiler.ProfilerLevel.Level2,
+            l2_cache=False,
+            data_simplification=False,
+        )
+    
+        with torch_npu.profiler.profile(
+                activities=[torch_npu.profiler.ProfilerActivity.CPU, torch_npu.profiler.ProfilerActivity.NPU],
+                schedule=torch_npu.profiler.schedule(wait=0, warmup=5, active=5, repeat=1, skip_first=0),
+                on_trace_ready=torch_npu.profiler.tensorboard_trace_handler("./npu_profiling"),
+                record_shapes=True,
+                profile_memory=True,
+                with_stack=True,
+                with_flops=False,
+                with_modules=False,
+                experimental_config=experimental_config,
+        ) as prof:
+            for _ in range(10):
+                for input_shape, gqa_interleave, global_window, local_window in test_cases:
+                    B, Q_H, KV_H, D, Q_LEN, KV_COMPUTED_LEN, dtype = input_shape
+                    query, key, value, grad_out, cu_q_lens, cu_total_seq_lens \
+                        = generate_sdpa_data(
+                            batch_size=B,
+                            num_q_heads=Q_H,
+                            num_kv_heads=KV_H,
+                            head_dim=D,
+                            max_q_len=Q_LEN,
+                            max_kv_computed_len=KV_COMPUTED_LEN,
+                            dtype=dtype,
+                        )
+                    swa_func = MojoSWAFunction.apply
+    
+                    head_dim = query.shape[-1]
+                    softmax_scale = 1.0 / math.sqrt(head_dim)
+    
+                    q = query.clone().detach().requires_grad_(True)
+                    k = key.clone().detach().requires_grad_(True)
+                    v = value.clone().detach().requires_grad_(True)
+                    o = swa_func(
+                        q,
+                        k,
+                        v,
+                        cu_q_lens,
+                        cu_total_seq_lens,
+                        True,
+                        local_window,
+                        global_window,
+                        softmax_scale,
+                        gqa_interleave,
+                        True,
+                    )
+>                   o.backward(grad_out)
+
+mojo_opset/tests/accuracy/functions/test_attention.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch/_tensor.py:639: in backward
+    return handle_torch_function(
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch/overrides.py:1721: in handle_torch_function
+    result = mode.__torch_function__(public_api, types, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch/utils/_device.py:104: in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch/_tensor.py:648: in backward
+    torch.autograd.backward(
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch/autograd/__init__.py:353: in backward
+    _engine_run_backward(
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch/autograd/graph.py:824: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/usr/local/python3.11.13/lib/python3.11/site-packages/torch/autograd/function.py:307: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+mojo_opset/backends/ttx/functions/attention.py:113: in backward
+    dq, dk, dv = swa_bwd(
+mojo_opset/backends/ttx/kernels/npu/swa.py:2516: in swa_bwd_impl
+    _swa_bwd_dkdv_kernel[grid](
+/usr/local/python3.11.13/lib/python3.11/site-packages/triton/runtime/jit.py:333: in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/runtime/autotuner.py:2246: in run
+    timings = self._batch_bench(*args, configs=pruned_configs, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <triton.backends.ascend.runtime.autotuner.AutoTilingTuner object at 0x7fa01edb4e10>
+configs = [<triton.runtime.autotuner.Config object at 0x7fa01ed30250>, <triton.runtime.autotuner.Config object at 0x7fa01ed30210>]
+args = (tensor([[[0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0., 0.],
+         [0., 0., 0.,  ..., 0., 0.,...       [ 0.2079, -1.0207,  0.1401,  ...,  0.4504,  0.0714, -0.7381]]],
+       device='npu:0', requires_grad=True), ...)
+kwargs = {'grid': (28,), 'warmup': False}
+
+    def _batch_bench(self, *args, configs, **kwargs):
+        from triton.compiler.errors import CompileTimeAssertionFailure, MLIRCompilationError
+        from triton.runtime.errors import OutOfResources
+    
+        kernels_call = {config: self._make_kernel_call(*args, config=config, **kwargs) for config in configs}
+        run_fns = {}
+        self._compile_failed_configs = []
+        exc = None
+        exc_stack = ""
+    
+        if self.compile_parallel:
+            import psutil
+    
+            max_workers = min(psutil.cpu_count(logical=False) * 3 // 4, len(kernels_call))
+            future_kernels = []
+            try:
+                with (
+                    ThreadPoolExecutor(max_workers=max_workers) as executor,
+                    triton.AsyncCompileMode(executor),
+                ):
+                    for config, fn in kernels_call.items():
+                        future_kernels.append((config, fn(warmup=True)))
+    
+                    for config, fut in future_kernels:
+                        try:
+                            if hasattr(fut, "result"):
+                                fut = fut.result()
+                            if hasattr(fut, "packed_metadata"):
+                                kernels_call[config].target_kernel_name = fut.packed_metadata.get("kernel_name")
+                            run_fns[config] = functools.partial(kernels_call[config], warmup=False)
+                        except (CompileTimeAssertionFailure, MLIRCompilationError) as e:
+                            import traceback
+                            exc_stack = traceback.format_exc()
+                            exc = e
+                            self._try_ubtuner(*args, config=config, excp=e, run_fns=run_fns, **kwargs)
+                            self._compile_failed_configs.append(config)
+            except Exception as e:
+                # ignore exception from __exit__() of AsyncCompileMode
+                triton.runtime._async_compile.active_mode.set(None)
+        else:
+            for config, fn in kernels_call.items():
+                try:
+                    compiled_kernel = fn(warmup=False)
+                    if hasattr(compiled_kernel, "packed_metadata"):
+                        fn.target_kernel_name = compiled_kernel.packed_metadata.get("kernel_name")
+                    run_fns[config] = functools.partial(fn, warmup=False)
+                except (CompileTimeAssertionFailure, MLIRCompilationError, OutOfResources) as e:
+                    import traceback
+                    exc_stack = traceback.format_exc()
+                    exc = e
+                    self._try_ubtuner(*args, config=config, excp=e, run_fns=run_fns, **kwargs)
+                    self._compile_failed_configs.append(config)
+    
+        if len(run_fns) == 0:
+>           raise RuntimeError(f"No valid triton configs. {type(exc).__name__}: {exc} \nStack trace: {exc_stack}")
+E           RuntimeError: No valid triton configs. MLIRCompilationError: 
+E           ///------------------[ERROR][Triton][BEG]------------------
+E           [ConvertLinalgRToBinary] encounters error:
+E           [WARNING] --enable-mixed-cv is deprecated.
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           [ERROR] Failed to run BiShengIR pipeline
+E           [ERROR] Executing: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile-a5 /tmp/tmp6fum0k0s/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp6fum0k0s/kernel --enable-vf-merge-level=1
+E           
+E           
+E           [INFO]: The compiled kernel cache is in /data/c00961524/0704/triton_cache/nvAqCIrmQ6HDHTD9zVJ4r6BwpR-ApzL_7s3eqtDYuTU
+E           
+E           ///------------------[ERROR][Triton][END]------------------
+E            
+E           Stack trace: Traceback (most recent call last):
+E             File "/usr/local/python3.11.13/lib/python3.11/site-packages/triton/compiler/compiler.py", line 289, in compile
+E               next_module = compile_ir(module, metadata)
+E                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E             File "/usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/compiler.py", line 1188, in <lambda>
+E               lambda src, metadata: linalg_to_bin_enable_npu_compile_910_95(
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E             File "/usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/compiler.py", line 649, in linalg_to_bin_enable_npu_compile_910_95
+E               ret = subprocess.run(
+E                     ^^^^^^^^^^^^^^^
+E             File "/usr/local/python3.11.13/lib/python3.11/subprocess.py", line 571, in run
+E               raise CalledProcessError(retcode, process.args,
+E           subprocess.CalledProcessError: Command '['/usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile', '/tmp/tmp6fum0k0s/kernel.ttadapter.mlir', '--target=Ascend950PR_9579', '--enable-auto-multi-buffer=True', '--enable-auto-bind-sub-block=True', '--disable-ffts', '--set-workspace-multibuffer=0', '--limit-auto-multi-buffer-of-local-buffer=no-limit', '--enable-mixed-cv=True', '--disable-auto-inject-block-sync=True', '--enable-auto-blockify-loop', '--enable-hfusion-compile=true', '--enable-triton-kernel-compile=true', '--append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc', '--bishengir-print-ir-after=hivm-graph-sync-solver', '-o', '/tmp/tmp6fum0k0s/kernel', '--enable-vf-merge-level=1']' returned non-zero exit status 1.
+E           
+E           The above exception was the direct cause of the following exception:
+E           
+E           Traceback (most recent call last):
+E             File "/usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/runtime/autotuner.py", line 2341, in _batch_bench
+E               fut = fut.result()
+E                     ^^^^^^^^^^^^
+E             File "/usr/local/python3.11.13/lib/python3.11/site-packages/triton/runtime/_async_compile.py", line 20, in result
+E               kernel = self.future.result()
+E                        ^^^^^^^^^^^^^^^^^^^^
+E             File "/usr/local/python3.11.13/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+E               return self.__get_result()
+E                      ^^^^^^^^^^^^^^^^^^^
+E             File "/usr/local/python3.11.13/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+E               raise self._exception
+E             File "/usr/local/python3.11.13/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+E               result = self.fn(*self.args, **self.kwargs)
+E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E             File "/usr/local/python3.11.13/lib/python3.11/site-packages/triton/runtime/jit.py", line 779, in async_compile
+E               return self.compile(src, target=target, options=options.__dict__, _env_vars=env_vars)
+E                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E             File "/usr/local/python3.11.13/lib/python3.11/site-packages/triton/compiler/compiler.py", line 303, in compile
+E               raise MLIRCompilationError(stage_name, error_detail) from e
+E           triton.compiler.errors.MLIRCompilationError: 
+E           ///------------------[ERROR][Triton][BEG]------------------
+E           [ConvertLinalgRToBinary] encounters error:
+E           [WARNING] --enable-mixed-cv is deprecated.
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: Failed to run buildFinalHIVMPipelines pipeline
+E           
+E           loc("/data/w00609825/mojo_opset/mojo_opset/backends/ttx/kernels/npu/swa.py":2020:0): error: cc overflow, requires 2621440 bits while 2097152 bits available!
+E           [ERROR] Failed to run BiShengIR pipeline
+E           [ERROR] Executing: /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/bishengir/bin/bishengir-compile-a5 /tmp/tmp6fum0k0s/kernel.ttadapter.mlir --target=Ascend950PR_9579 --enable-auto-multi-buffer=True --enable-auto-bind-sub-block=True --disable-ffts --set-workspace-multibuffer=0 --limit-auto-multi-buffer-of-local-buffer=no-limit --enable-mixed-cv=True --disable-auto-inject-block-sync=True --enable-auto-blockify-loop --enable-hfusion-compile=true --enable-triton-kernel-compile=true --append-bisheng-options=-cce-link-aicore-ll-module /usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/lib/libdevice.10.bc --bishengir-print-ir-after=hivm-graph-sync-solver -o /tmp/tmp6fum0k0s/kernel --enable-vf-merge-level=1
+E           
+E           
+E           [INFO]: The compiled kernel cache is in /data/c00961524/0704/triton_cache/nvAqCIrmQ6HDHTD9zVJ4r6BwpR-ApzL_7s3eqtDYuTU
+E           
+E           ///------------------[ERROR][Triton][END]------------------
+
+/usr/local/python3.11.13/lib/python3.11/site-packages/triton/backends/ascend/runtime/autotuner.py:2369: RuntimeError
+------------------------------ Captured log call -------------------------------
+INFO     torch_npu.env:patch_getenv.py:15 get env TRITON_DEBUG = 1
+INFO     torch_npu.env:patch_getenv.py:15 get env TRITON_ALWAYS_COMPILE = 1
+INFO     torch_npu.env:patch_getenv.py:15 get env TRITON_BENCH_METHOD = npu
+=============================== warnings summary ===============================
+mojo_opset/tests/accuracy/functions/test_attention.py::test_swa_function_perf
+  /usr/local/python3.11.13/lib/python3.11/site-packages/torch/utils/_device.py:104: UserWarning: Cannot create tensor with interal format while allow_internel_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:340.)
+    return func(*args, **kwargs)
+
+mojo_opset/tests/accuracy/functions/test_attention.py: 11 warnings
+  /usr/local/python3.11.13/lib/python3.11/site-packages/triton/language/semantic.py:1740: UserWarning: tl.where with a non-boolean condition is deprecated and will error out in a future triton release. Got int8
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED mojo_opset/tests/accuracy/functions/test_attention.py::test_swa_function_perf
+======================= 1 failed, 12 warnings in 17.18s ========================
