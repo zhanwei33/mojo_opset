@@ -1,0 +1,2 @@
+Device_id,OP Type,Core Type,Count,Total Time(us),Min Time(us),Avg Time(us),Max Time(us),Ratio(%)
+5,_swa_bwd_dkdv_kernel,AI_CORE,280,32997.081,97.9,117.846,136.063,100.0

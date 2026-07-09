@@ -1,0 +1,4 @@
+Device_id,Level,API Name,Time(us),Count,Avg(us),Min(us),Max(us),Variance
+5,acl,aclrtPointerGetAttributes,664.026,3080,0.216,0.14,9.274,0.033
+5,acl,aclrtSynchronizeDeviceWithTimeout,31882.866,281,113.462,2.043,134.281,256.848
+5,node,launch,891.0,280,3.182,2.374,22.994,3.881
